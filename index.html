@@ -1,125 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kanaa Spoken English</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
       background: #f8f8f8;
-      color: #222;
+      color: #333;
     }
     header {
       background: #34495e;
       color: white;
-      padding: 1.5rem;
+      padding: 2rem;
       text-align: center;
     }
-    .container {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 2rem;
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background: white;
       padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
     }
-    article {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .hero-text {
+      flex: 1;
+      padding: 1rem;
     }
-    article img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+    .hero-text h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
     }
-    article h2 {
+    .hero-img {
+      flex: 1;
+      padding: 1rem;
+    }
+    .hero-img img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .contact-section {
+      background: #ffffff;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+    .contact-form h2 {
+      margin-bottom: 1rem;
       color: #34495e;
     }
-    aside {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
     }
-    aside h3 {
-      color: #34495e;
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
     }
-    footer {
+    .contact-form button {
+      padding: 0.75rem;
       background: #34495e;
       color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
     }
     .contact-info {
-      margin-top: 1rem;
-      font-size: 0.95rem;
+      flex: 1;
+      min-width: 300px;
+    }
+    .contact-info h2 {
+      margin-bottom: 1rem;
+      color: #34495e;
+    }
+    .contact-info p {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .whatsapp-link {
+      display: inline-flex;
+      align-items: center;
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .whatsapp-link img {
+      width: 20px;
+      margin-right: 8px;
     }
     iframe {
       width: 100%;
       height: 300px;
       border: none;
-      border-radius: 8px;
-      margin-top: 1rem;
+      margin-top: 2rem;
+    }
+    footer {
+      text-align: center;
+      background: #34495e;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Kanaa Spoken English</h1>
-    <p>Learn Fluent English with Confidence</p>
+    <p>Speak English in just 20 hours</p>
   </header>
 
-  <div class="container">
-    <main>
-      <article>
-        <img src="https://raw.githubusercontent.com/kanagajayasankar/my-english-blog/main/image/image1.jpg" alt="Speak Confidently">
-        <h2>How to Speak English Confidently</h2>
-        <p>Fluency begins with daily practice. Start by reading aloud, recording yourself, and watching English shows. Most importantly, don't be afraid of making mistakes — they are stepping stones to growth.</p>
-      </article>
-      <article>
-        <img src="https://raw.githubusercontent.com/kanagajayasankar/my-english-blog/main/image/image3.jpg" alt="Common Phrases">
-        <h2>Top 5 English Phrases for Beginners</h2>
-        <p>Want to sound more natural in everyday conversations? Learn phrases like "What's up?", "No worries", "Sounds good", "I’m not sure", and "That’s great!" for casual fluency.</p>
-      </article>
-      <article>
-        <img src="https://raw.githubusercontent.com/kanagajayasankar/my-english-blog/main/image/image3.jpg" alt="Life Skills">
-        <p>English opens doors to global opportunities. It helps in career growth, travel, academics, and social life. Mastering it is not just about grammar — it’s about being understood.</p>
-        <h2>Why Spoken English is a Life Skill</h2>
-      </article>
-    </main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Master English Fluency with Us</h1>
+      <p>Join our unique spoken English course and transform your communication skills. Designed for all levels and ages!</p>
+    </div>
+    <div class="hero-img">
+      <img src="https://raw.githubusercontent.com/kanagajayasankar/my-english-blog/main/image/image1.jpg" alt="Speaking Course">
+    </div>
+  </section>
 
-    <aside>
-      <h3>Popular Articles</h3>
-      <ul>
-        <li><a href="#">How to Speak English Confidently</a></li>
-        <li><a href="#">Top 5 English Phrases for Beginners</a></li>
-        <li><a href="#">Why Spoken English is a Life Skill</a></li>
-      </ul>
-    </aside>
-  </div>
-
-  <footer>
-    <h2>Contact Information</h2>
+  <section class="contact-section">
     <div class="contact-info">
-      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <h2>Get in Touch</h2>
+      <p><strong>Phone:</strong> <a class="whatsapp-link" href="https://wa.me/919876543210" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> +91 98765 43210</a></p>
+      <p><strong>Email:</strong> kanaaenglish@example.com</p>
       <p><strong>Address:</strong> <span id="address-text">6/648, 3rd Street, Lakshmi Nagar, Virudhunagar, Tamil Nadu, India</span></p>
     </div>
-    <iframe id="map-frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <p>&copy; 2025 Kanaa Spoken English | Learn. Speak. Succeed.</p>
+
+    <div class="contact-form">
+      <h2>Submit Your Details</h2>
+      <form onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="phone" placeholder="Your Phone Number" required>
+        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <iframe id="map-frame" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <footer>
+    &copy; 2025 Kanaa Spoken English | Learn. Speak. Succeed.
   </footer>
 
   <script>
     const address = document.getElementById('address-text').innerText;
-    const mapFrame = document.getElementById('map-frame');
     const encodedAddress = encodeURIComponent(address);
-    mapFrame.src = `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
+    document.getElementById('map-frame').src = `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
+
+    function sendToWhatsApp() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+      const msg = `New Inquiry from Website%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+      const whatsappURL = `https://wa.me/919876543210?text=${msg}`;
+      window.open(whatsappURL, '_blank');
+    }
   </script>
 </body>
 </html>
