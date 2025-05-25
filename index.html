@@ -19,18 +19,6 @@
       padding: 1.5rem;
       text-align: center;
     }
-    nav {
-      background: #ecf0f1;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 0.75rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #2c3e50;
-      font-weight: bold;
-    }
     .container {
       display: grid;
       grid-template-columns: 3fr 1fr;
@@ -91,17 +79,17 @@
   <div class="container">
     <main>
       <article>
-        <img src="https://via.placeholder.com/800x400" alt="Placeholder">
+        <img src="https://raw.githubusercontent.com/kanagajayasankar/my-english-blog/main/image/image1.jpg" alt="Speak Confidently">
         <h2>How to Speak English Confidently</h2>
         <p>Fluency begins with daily practice. Start by reading aloud, recording yourself, and watching English shows. Most importantly, don't be afraid of making mistakes — they are stepping stones to growth.</p>
       </article>
       <article>
-        <img src="https://via.placeholder.com/800x400" alt="Placeholder">
+        <img src="https://raw.githubusercontent.com/kanagajayasankar/my-english-blog/main/image/image2.jpg" alt="Common Phrases">
         <h2>Top 5 English Phrases for Beginners</h2>
         <p>Want to sound more natural in everyday conversations? Learn phrases like "What's up?", "No worries", "Sounds good", "I’m not sure", and "That’s great!" for casual fluency.</p>
       </article>
       <article>
-        <img src="https://via.placeholder.com/800x400" alt="Placeholder">
+        <img src="https://raw.githubusercontent.com/kanagajayasankar/my-english-blog/main/image/image3.jpg" alt="Life Skills">
         <h2>Why Spoken English is a Life Skill</h2>
         <p>English opens doors to global opportunities. It helps in career growth, travel, academics, and social life. Mastering it is not just about grammar — it’s about being understood.</p>
       </article>
@@ -121,10 +109,17 @@
     <h2>Contact Information</h2>
     <div class="contact-info">
       <p><strong>Phone:</strong> +91 98765 43210</p>
-      <p><strong>Address:</strong> 6/648, 3rd Street, Lakshmi nagar, Virudhunagar, Tamil Nadu, India</p>
+      <p><strong>Address:</strong> <span id="address-text">6/648, 3rd Street, Lakshmi Nagar, Virudhunagar, Tamil Nadu, India</span></p>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.352938964878!2d76.95517557481746!3d11.017942654809234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8576e9b1f6f15%3A0xd296b2c7aa107267!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716645297231!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe id="map-frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <p>&copy; 2025 Kanaa Spoken English | Learn. Speak. Succeed.</p>
   </footer>
+
+  <script>
+    const address = document.getElementById('address-text').innerText;
+    const mapFrame = document.getElementById('map-frame');
+    const encodedAddress = encodeURIComponent(address);
+    mapFrame.src = `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
+  </script>
 </body>
 </html>
