@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kanaa Spoken English</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -16,103 +16,109 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      background: #f8f8f8;
+      background: #f4f6f8;
       color: #333;
     }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
     header {
-      background: #34495e;
+      background: linear-gradient(to right, #34495e, #2c3e50);
       color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
     }
     .hero {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
-      background: white;
-      padding: 2rem 0;
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
-    .hero-text {
+    .hero-text, .hero-img {
       flex: 1;
-      padding: 1rem;
+      min-width: 280px;
     }
     .hero-text h1 {
       font-size: 2rem;
       color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1rem;
+      line-height: 1.5;
     }
     .hero-text button {
-      margin-top: 1rem;
-      padding: 0.6rem 1.5rem;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
       background: #e74c3c;
-      color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      color: white;
       font-size: 1rem;
       cursor: pointer;
+      transition: 0.3s ease;
     }
-    .hero-img {
-      flex: 1;
-      padding: 1rem;
-      max-width: 400px;
+    .hero-text button:hover {
+      background: #c0392b;
     }
     .hero-img img {
-      width: 100%;
+      max-width: 100%;
       border-radius: 10px;
     }
-    .contact-section {
-      background: #ffffff;
-      padding: 2rem 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
+    .register-block,
+    .contact-section,
+    .restoration-section {
+      background: #fff;
+      margin-top: 3rem;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
-    .contact-form {
-      flex: 1;
-      min-width: 300px;
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
     }
-    .contact-form h2 {
-      margin-bottom: 1rem;
-      color: #34495e;
-    }
-    .contact-form form {
+    form {
       display: flex;
       flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
     }
-    .contact-form input,
-    .contact-form textarea {
-      margin-bottom: 1rem;
+    input, textarea {
       padding: 0.75rem;
-      border: 1px solid #ccc;
       border-radius: 5px;
+      border: 1px solid #ccc;
       font-size: 1rem;
     }
-    .contact-form button {
-      padding: 0.75rem;
+    button[type="submit"] {
       background: #34495e;
       color: white;
+      padding: 0.75rem;
       border: none;
       border-radius: 5px;
       font-size: 1rem;
       cursor: pointer;
     }
-    .contact-info {
-      flex: 1;
-      min-width: 300px;
-    }
-    .contact-info h2 {
-      margin-bottom: 1rem;
-      color: #34495e;
+    button[type="submit"]:hover {
+      background: #2c3e50;
     }
     .contact-info p {
       font-size: 1rem;
-      margin-bottom: 0.5rem;
+      margin: 0.5rem 0;
     }
     .whatsapp-link {
       display: inline-flex;
@@ -125,118 +131,34 @@
       width: 20px;
       margin-right: 8px;
     }
-    .register-block {
-      margin: 2rem 0;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    }
-    .register-block h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #34495e;
-    }
-    .register-block form {
-      display: flex;
-      flex-direction: column;
-    }
-    .register-block input,
-    .register-block textarea {
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    .register-block button {
-      padding: 0.75rem;
-      background-color: #e74c3c;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
     iframe {
       width: 100%;
       height: 300px;
       border: none;
+      border-radius: 10px;
       margin-top: 2rem;
     }
     footer {
-      text-align: center;
-      background: #34495e;
+      background: #2c3e50;
       color: white;
+      text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>Kanaa Spoken English</h1>
-      <p>Speak English in just 20 hours</p>
-    </header>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Master English Fluency with Us</h1>
-        <p>Join our unique spoken English course and transform ur communication skills. Designed for all levels and ages!</p>
-        <a href="#contact" style="text-decoration: none;"><button>Register Now</button></a>
-      </div>
-      <div class="hero-img">
-        <img src="https://raw.githubusercontent.com/kanagajayasankar/my-english-blog/main/image/image1.jpg" alt="Speaking Course">
-      </div>
-    </section>
+  <header>
+    <h1>Kanaa Spoken English</h1>
+    <p>Speak English in just 20 hours</p>
+  </header>
 
-    <section id="contact" class="register-block">
-      <h2>Register Now</h2>
-      <form onsubmit="sendToWhatsApp(); return false;">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <input type="text" id="phone" placeholder="Your Phone Number" required>
-        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send via WhatsApp</button>
-      </form>
-    </section>
-
-    <section class="contact-section">
-      <div class="contact-info">
-        <h2>Get in Touch</h2>
-        <p><strong>Phone:</strong> <a class="whatsapp-link" href="https://wa.me/916383274992" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> +91 6383274992</a></p>
-        <p><strong>Email:</strong> kanaaenglish@example.com</p>
-        <p><strong>Address:</strong> <span id="address-text">6/648, 3rd Street, Lakshmi Nagar, Virudhunagar, Tamil Nadu, India</span></p>
-      </div>
-    </section>
-
-    <iframe id="map-frame" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    <footer>
-      &copy; 2025 Kanaa Spoken English | Learn. Speak. Succeed.
-    </footer>
-  </div>
-
-  <script>
-    const address = document.getElementById('address-text').innerText;
-    const encodedAddress = encodeURIComponent(address);
-    document.getElementById('map-frame').src = `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
-
-    function sendToWhatsApp() {
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const message = document.getElementById('message').value;
-      const msg = `New Inquiry from Website%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
-      const whatsappURL = `https://wa.me/916383274992?text=${msg}`;
-      const tempLink = document.createElement('a');
-      tempLink.href = whatsappURL;
-      tempLink.style.display = 'none';
-      document.body.appendChild(tempLink);
-      tempLink.click();
-      document.body.removeChild(tempLink);
-    }
-  </script>
-</body>
-</html>
+  <section class="section hero">
+    <div class="hero-text">
+      <h1>Master English Fluency with Us</h1>
+      <p>Join our unique spoken English course and transform your communication skills. Designed for all levels and ages!</p>
+      <a href="#register"><button>Register Now</button></a>
+    </div>
+    <div class="hero-img">
+      <img src="https://raw.githubus
