@@ -161,4 +161,60 @@
       <a href="#register"><button>Register Now</button></a>
     </div>
     <div class="hero-img">
-      <img src="https://raw.githubus
+      <img src="https://raw.githubusercontent.com/kanagajayasankar/my-english-blog/main/image/image1.jpg" alt="Speaking Course">
+    </div>
+  </section>
+
+  <section id="register" class="section register-block">
+    <h2>Register Now</h2>
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="text" id="phone" placeholder="Your Phone Number" required>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </section>
+
+  <section class="section contact-section">
+    <h2>Get in Touch</h2>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> <a class="whatsapp-link" href="https://wa.me/916383274992" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">+91 6383274992</a></p>
+      <p><strong>Email:</strong> kanaaenglish@example.com</p>
+      <p><strong>Address:</strong> <span id="address-text">6/648, 3rd Street, Lakshmi Nagar, Virudhunagar, Tamil Nadu, India</span></p>
+    </div>
+    <iframe id="map-frame" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section class="section restoration-section">
+    <h2>Restoration Area</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      If you've previously registered and need to restore your details, or if you're a returning student looking to reconnect with our team, please contact us via WhatsApp or email. We're here to help you continue your journey with ease.
+    </p>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a class="whatsapp-link" href="https://wa.me/916383274992" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">Contact Us on WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Kanaa Spoken English | Learn. Speak. Succeed.
+  </footer>
+
+  <script>
+    const address = document.getElementById('address-text').innerText;
+    const encodedAddress = encodeURIComponent(address);
+    document.getElementById('map-frame').src = `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
+
+    function sendToWhatsApp() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+      const msg = `New Inquiry from Website%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+      const whatsappURL = `https://wa.me/916383274992?text=${msg}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+
+</body>
+</html>
